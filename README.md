@@ -8,10 +8,13 @@ visFreqPlace.R | long_matrix_temp_order_seas_prec.csv | | 6 |
 meanFrequencyDecomp.py | alldata.csv | long_matrix_temp_order_seas_prec.csv | 
 meanFrequencyDecomp.py | FullDatabase.csv | long_matrix_temp_order_seas_prec.csv | 
 meanFrequencyDecomp.py | universallyAligned_powersTranpose.csv | long_matrix_temp_order_seas_prec.csv | 
-analyzeCorrelations.py | universallyAligned_powersTranpose.csv | | 9, S2, S3 | 
-analyzeCorrelations.py | FullDatabase.csv | | 9, S2, S3 |
-analyzeCorrelations.py | frequency_to_flow_metrics_r_all_jan2021_universally_aligned.csv | | 9, S2, S3 |
+analyzeCorrelations.py | universallyAligned_powersTranpose.csv | | 9, S2, S3, S8, S15 | 
+analyzeCorrelations.py | FullDatabase.csv | | 9, S2, S3, S8, S15 |
+analyzeCorrelations.py | frequency_to_flow_metrics_r_all_jan2021_universally_aligned.csv | | 9, S2, S3, S8, S15 |
 plotHuman.py | ml_importances_with_categories.csv | | 10 |
+humanPlotPrep.py | ml_feature_importances_short.csv | | |
+machineLearning.py | universallyAligned_powers.csv | ml_feature_importances_short.csv | | 
+machineLearning.py | alldata_hemisphereCorrected.csv | ml_feature_importances_short.csv | |
 
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
