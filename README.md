@@ -4,6 +4,12 @@ code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
 map_of_catchments.py | dayOfMeanFlowThroughTime.csv | | 2 |
 map_of_catchments.py | alldata.csv | | 2 |
+
+visFreqPlace.R | long_matrix_temp_order_seas_prec.csv | | 6 |
+meanFrequencyDecomp.py | alldata.csv | long_matrix_temp_order_seas_prec.csv | 
+meanFrequencyDecomp.py | FullDatabase.csv | long_matrix_temp_order_seas_prec.csv | 
+meanFrequencyDecomp.py | universallyAligned_powersTranpose.csv | long_matrix_temp_order_seas_prec.csv | 
+
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
 splitIntoNonGlobalWaterYears.py | alldata.csv | localWaterYear |  |
