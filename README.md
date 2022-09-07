@@ -11,6 +11,8 @@ meanFrequencyDecomp.py | universallyAligned_powersTranpose.csv | long_matrix_tem
 analyzeCorrelations.py | universallyAligned_powersTranpose.csv | | 9, S2, S3 | 
 analyzeCorrelations.py | FullDatabase.csv | | 9, S2, S3 |
 analyzeCorrelations.py | frequency_to_flow_metrics_r_all_jan2021_universally_aligned.csv | | 9, S2, S3 |
+plotHuman.py | ml_importances_with_categories.csv | | 10 |
+
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
 splitIntoNonGlobalWaterYears.py | alldata.csv | localWaterYear |  |
