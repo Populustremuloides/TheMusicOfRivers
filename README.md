@@ -2,8 +2,8 @@
 
 code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
-map_of_catchments.py | dayOfMeanFlowThroughTime.csv | | 1 |
-map_of_catchments.py | alldata.csv | | 1 |
+map_of_catchments.py | dayOfMeanFlowThroughTime.csv | | 2 |
+map_of_catchments.py | alldata.csv | | 2 |
 dayOfMeanFlowThroughTime.py | alldata.csv | dayOfMeanFlowThroughTime.csv |  |
 spectralThroughTime.py | alldata.csv | spectralPowersThroughTime.csv |  |
 splitIntoNonGlobalWaterYears.py | alldata.csv | localWaterYear |  |
