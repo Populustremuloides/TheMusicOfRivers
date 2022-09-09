@@ -4,6 +4,7 @@ code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
 map_of_catchments.py | dayOfMeanFlowThroughTime.csv | | 2 |
 map_of_catchments.py | alldata.csv | | 2 |
+correlateSpectralWithSelf.py | universallyAligned_powers.csv | | 4 |
 visFreqPlace.R | long_matrix_temp_order_seas_prec.csv | | 6 |
 meanFrequencyDecomp.py | alldata.csv | long_matrix_temp_order_seas_prec.csv | 
 meanFrequencyDecomp.py | FullDatabase.csv | long_matrix_temp_order_seas_prec.csv | 
