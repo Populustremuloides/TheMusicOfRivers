@@ -1,5 +1,28 @@
 # TheMusicOfRivers
 
+
+## Data Availability
+
+The raw data files used in this analysis are currently published on Research Gate [here](https://doi.org/10.13140/RG.2.2.31696.84487) and [here](https://doi.org/10.13140/RG.2.2.24985.95842). The methods used for generating these data can be found in [this preprint](https://doi.org/10.1002/essoar.10507854.1).
+
+## Dependencies
+
+The Python code was executed using version 3.7.1. To run the code, you will need the following packages installed in your environment:
+
+- pandas 1.2.3
+- scipy 1.6.2
+- numpy 1.19.2
+- matplotlib 3.3.4
+- seaborn 0.11.1
+- sklearn 0.24.1
+
+In addition, the code uses the following native libraries:
+- math
+- os
+
+R code was executing using version 3.6.1. R libraries used include the following:
+- WaveletComp 1.1
+
 code file | input file | output file | figure produced (if any) | Notes
 -------------- | ---- | -------- | ------ | -----
 map_of_catchments.py | dayOfMeanFlowThroughTime.csv | | 2 |
