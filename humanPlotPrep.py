@@ -187,9 +187,9 @@ for index, row in bigDf.iterrows():
 bigDf["cateogry"] = category
 bigDf["time_period"] = timePeriod
 
-#print(bigDf)
-bigDf = bigDf[(bigDf["trial_no"] % 3) == 2] # remove the DTR models
-#print(bigDf)
+print(bigDf)
+bigDf = bigDf[(bigDf["trial_no"] % 3) != 2] # remove the DTR models
+print(bigDf)
 
 bigDf.to_csv("ml_importances_with_categories.csv", index=False)
-print(bigDf)
+#print(bigDf)

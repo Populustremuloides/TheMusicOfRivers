@@ -12,13 +12,13 @@ df %>% group_by(feature, cateogry, time_period) %>%
 	summarise(sum_importance = sum(mean_importance)) %>%
 
 ggplot(aes(x=time_period,y=sum_importance, fill=cateogry)) +
-	geom_bar(position="fill", stat="identity") +
+	geom_bar(position="fill", stat="identity", colour="black") +
 	theme_bw() +
 	ylab("importance (proportion)") +
 	ggtitle("ML model importances by category and frequency") +
 	xlab("time period") #+
         #scale_color_gradient(high="red", space ="Lab" )
 
-ggsave("humanPercent2_withDTR.png")
+ggsave("humanPercent2_withoutDTR.png")
 
 
