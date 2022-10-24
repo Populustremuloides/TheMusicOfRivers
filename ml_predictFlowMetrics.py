@@ -158,10 +158,10 @@ for trialNo in range(0,60):
             testX, testY = splitIntoXY(test)
             trainX, trainY = splitIntoXY(train)
             
-            if trialNo % 3 == 0:
+            if trialNo % 2 == 0:
                 model = GradientBoostingRegressor(n_estimators = 100)
                 modelType = "GBR"
-            elif trialNo % 3 == 1:
+            elif trialNo % 2 == 1:
                 model = RandomForestRegressor(n_estimators = 100)
                 modelType = "RFR"
 
