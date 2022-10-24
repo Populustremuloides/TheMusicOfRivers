@@ -62,7 +62,10 @@ if removeSparse:
     tooSparseColumns = set(tooSparseColumns)
     predictors = list(predictors.difference(tooSparseColumns))
     tooSparseColumns = list(tooSparseColumns)
-
+    print("number of columns used: ", len(predictors))
+    print("number of columns excluded: ", len(tooSparseColumns))
+    print(tooSparseColumns) 
+    
 def splitTestTrain(data, seed1, seed2):
     random.seed(seed1 + seed2 + copyNo) # ensure different selections between periods, but consistent between runs
     
@@ -82,7 +85,6 @@ def splitIntoXY(data):
     x = data[:,1:]
     return x, y
 
-
 shortDict = {
         "period":[],
         "feature":[],
@@ -101,6 +103,14 @@ rSquaredDict = {
         "model_type":[]
         }
 
+
+# normalize the data
+
+df = df - df.mean()
+df = df / df.std()
+print("normalized data")
+print(df)
+
 secondsTotal = time.time()
 #seconds1 = time.time()
 #seconds2 = time.time()
@@ -113,16 +123,12 @@ for trialNo in range(0,6):
             # drop everything except the X and Y values
             period = [df.columns[i]]
             keepers = period + predictors     
-    
 
             df1 = df.filter(keepers)
             df1 = df1.dropna()
 
             print("trial no: " + str(trialNo) + ". col: "  + str(df.columns[i]))
 
-            scaler = StandardScaler()
-            #print(df1.to_numpy().shape)
-            #dataMatrix = scaler.fit_transform(X=df1.to_numpy())
             dataMatrix = df1.to_numpy()
 
             # split into train, test
