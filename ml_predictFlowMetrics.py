@@ -129,7 +129,8 @@ secondsTotal = time.time()
 #seconds1 = time.time()
 #seconds2 = time.time()
 
-
+df = df - df.mean()
+df = df / df.std()
 
 for trialNo in range(0,60):
     for i in range(1109,1298):
