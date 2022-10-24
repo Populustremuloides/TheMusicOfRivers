@@ -149,9 +149,6 @@ for trialNo in range(0,60):
             
             print("trial no: " + str(trialNo) + ". col: "  + str(df.columns[i]))
 
-            scaler = StandardScaler()
-            #print(df1.to_numpy().shape)
-            #dataMatrix = scaler.fit_transform(X=df1.to_numpy())
             dataMatrix = df1.to_numpy()
 
             # split into train, test
