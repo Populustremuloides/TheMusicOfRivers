@@ -36,6 +36,7 @@ fourier_full.py | universallyAlignedGlobalFlow_DailyQ2_column.csv | glob_flow_fo
 bin_frequencies.py | glob_flow_fourier_decomposition_blackman.csv | glob_flow_fourier_decomposition_blackman_mini.csv |
 correlate_fourier.py | glob_flow_fourier_decomposition_blackman_mini.csv | fourierCorrelations_blackman_mini.csv |
 heatmap.py | fourierCorrelations_blackman_mini.csv | | S8 |
+dams.py | | | S18 |
 correlateFourierWithCatChars.py | glob_flow_fourier_decomposition_blackman_mini.csv, alldata_hemisphereCorrected.csv | correlations_between_fourier_and_cat_chars.csv |
 correlateWaveletWithCatChars.py | universallyAligned_powers.csv, alldata_hemisphereCorrected.csv | correlations_between_wavelet_and_cat_chars.csv |
 analyzeCorrelationsWavelet.py | correlations_between_wavelet_and_cat_chars.csv | | 9, S2, S3, S6, S15 | 
