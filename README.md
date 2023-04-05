@@ -35,14 +35,14 @@ meanFrequencyDecomp.py | universallyAligned_powersTranpose.csv | long_matrix_tem
 fourier_full.py | universallyAlignedGlobalFlow_DailyQ2_column.csv | glob_flow_fourier_decomposition_blackman.csv |
 bin_frequencies.py | glob_flow_fourier_decomposition_blackman.csv | glob_flow_fourier_decomposition_blackman_mini.csv |
 correlate_fourier.py | glob_flow_fourier_decomposition_blackman_mini.csv | fourierCorrelations_blackman_mini.csv |
-heatmap.py | fourierCorrelations_blackman_mini.csv | |
+heatmap.py | fourierCorrelations_blackman_mini.csv | | S8 |
 correlateFourierWithCatChars.py | glob_flow_fourier_decomposition_blackman_mini.csv, alldata_hemisphereCorrected.csv | correlations_between_fourier_and_cat_chars.csv |
 correlateWaveletWithCatChars.py | universallyAligned_powers.csv, alldata_hemisphereCorrected.csv | correlations_between_wavelet_and_cat_chars.csv |
-analyzeCorrelationsWavelet.py | correlations_between_wavelet_and_cat_chars.csv | | 9, S2, S3, S8, S15 | 
-analyzeCorrelations.py | correlations_between_fourier_and_cat_chars.csv | | |
+analyzeCorrelationsWavelet.py | correlations_between_wavelet_and_cat_chars.csv | | 9, S2, S3, S6, S15 | 
+analyzeCorrelations.py | correlations_between_fourier_and_cat_chars.csv | | S16, S17 |
 plotHuman.py | ml_importances_with_categories.csv | | 10 |
 ml_visualize_predict_flow_metrics.py | ml_predict_flow_metrics_feature_importances_wide.csv | | S4, S5 |
-humanPlotPrepPVals.py | ml_r_squared.csv |  | S16 | 
+humanPlotPrepPVals.py | ml_r_squared.csv |  | S19 | 
 ml_predict_flow_metrics.py | universallyAligned_powers.csv, alldata.csv | ml_predict_flow_metrics_feature_importances_wide.csv | |
 humanPlotPrep.py | ml_feature_importances_short.csv | | |
 machineLearning.py | universallyAligned_powers.csv, alldata_hemisphereCorrected.csv | ml_feature_importances_short.csv, ml_r_squared.csv | |
