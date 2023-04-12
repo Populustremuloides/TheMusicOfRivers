@@ -2,10 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib 
+import math
 
 # Prepare the dataframe ***************************************************************
 
-df = pd.read_csv("correlations_between_fourier_and_cat_chars_mini.csv")
+df = pd.read_csv("correlations_between_wavelet_and_cat_chars.csv")
 df.index = df[df.columns[0]]
 df = df.drop(df.columns[0], axis=1)
 
@@ -21,13 +22,6 @@ for col in df.columns[113:]:
     maxes.append(np.max(corrs))
     absMaxes.append(np.max(np.abs(corrs)))
 
-plt.hist(maxes, bins=60)
-plt.xlabel("coefficient of correlation")
-plt.ylabel("count")
-plt.title("Maximum Spearman Coefficient of Correlation between Flow Metrics and Spectral Power", wrap=True)
-plt.tight_layout()
-plt.show()
-
 fig, ax = plt.subplots(figsize=(10,2))
 
 for col in df.columns:
@@ -35,14 +29,17 @@ for col in df.columns:
     data = [float(x) for x in data]
     ax.plot(data, c="dimgrey", alpha=0.8)
 
+samplingRate = 50
 rounded = []
 for col in df.index:
-    rounded.append(format(float(col), ".2f"))
+    #rounded.append(float(format(float(col), ".2f")))
+    rounded.append(int(math.ceil(col)))
+
 
 ax.set_ylabel("coefficient of correlation")
 ax.set_xlabel("period length (days)")
-ax.set_title("Spearman Correlations between Flow Metrics and Spectral Power (Fourier)")
-ax.set_xticks(list(range(len(rounded))), rounded, rotation=90)
+ax.set_title("Spearman Correlations between Flow Metrics and Spectral Power")
+ax.set_xticks(list(range(len(rounded)))[::samplingRate], rounded[::samplingRate], rotation=90)
 plt.tight_layout()
 plt.show()
 
@@ -97,25 +94,24 @@ for col in df.columns:
     if "strmDrop" == col:
             ax.plot(row, label="stream drop", c="magenta")
 #    if "gelev_m" == col:
-#            ax.plot(row, label="elevation", c="k")
+#            ax.plot(row, label="elevation", c="olive")
+
     if "dam" in col.lower():
-        print(index)
         if not damSeen:
             ax.plot(row, label="dams", c="k", linestyle="--")
             damSeen = True
         else:
             ax.plot(row, c="k", linestyle="--")
 
-
-
+samplingRate = 50
 ax.set_ylim(-0.6,0.6)
-ax.set_xticks(list(range(len(rounded))), rounded, rotation=90)
+ax.set_xticks(list(range(len(rounded)))[::samplingRate], rounded[::samplingRate], rotation=90)
 ax.set_ylabel("coefficient of correlation")
 ax.set_xlabel("period length (days)")
-ax.set_title("Spearman Correlations between Catchment Characteristics and Spectral Power (using fourier)", wrap=True)
+ax.set_title("Spearman Correlations between Catchment Characteristics and Spectral Power", wrap=True)
 plt.legend(bbox_to_anchor=(1.04, 0.5), loc="center left")
 plt.tight_layout()
-plt.savefig("cat_chars_1.png")
+plt.savefig("cat_chars_1_wavelet.png")
 plt.show()
 
 hydroSeen = False
@@ -150,6 +146,7 @@ for col in df.columns:
             ax.plot(row, label="Open Water / lakes (not \nnormalized by catchment size)", c="blue")
         else:
             ax.plot(row, c="blue")
+
     if "dam" in col.lower():
         print(index)
         if not damSeen:
@@ -161,12 +158,12 @@ for col in df.columns:
 #plt.style.use("seaborn-poster")
 #plt.legend()
 ax.set_ylim(-0.6,0.6)
-ax.set_xticks(list(range(len(rounded))), rounded, rotation=90)
+ax.set_xticks(list(range(len(rounded)))[::samplingRate], rounded[::samplingRate], rotation=90)
 ax.set_ylabel("coefficient of correlation")
 ax.set_xlabel("period length (days)")
 plt.legend(bbox_to_anchor=(1.04, 0.5), loc="center left")
-ax.set_title("Spearman Correlations between Land Cover Characteristics and Spectral Power (using fourier)")
+ax.set_title("Spearman Correlations between Land Cover Characteristics and Spectral Power")
 plt.tight_layout()
-plt.savefig("cat_chars_2.png")
+plt.savefig("cat_chars_2_wavelet.png")
 plt.show()
 
